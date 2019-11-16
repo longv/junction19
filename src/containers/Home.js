@@ -5,6 +5,9 @@ import { Input } from 'antd';
 import _ from 'lodash';
 import { ParkCard } from '../components'
 import { variables } from  '../styles/variables'
+import {
+  Link
+} from "react-router-dom";
 
 class Home extends React.Component {
 
@@ -42,7 +45,9 @@ class Home extends React.Component {
           {_.map(nearbyParkData, (park, i) => {
             return (
               <Box width={[1, 1/3]} mr={[0,2]} key={i}>
-                <ParkCard park={park} />
+                <Link to="/details">
+                  <ParkCard park={park} />
+                </Link>
               </Box>
             )
           })}

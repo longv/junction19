@@ -6,15 +6,7 @@ import {ReactComponent as FemaleRed} from "../svg-assets/female-red.svg";
 import {ReactComponent as FemaleYellow} from "../svg-assets/male-yellow.svg";
 
 class CheckIn extends React.Component {
-    state = {
-      isCheckingIn: false,
-      checked: false,
-      nearbyCounter: null,
-      points: null
-    };
-
     render() {
-        const { isCheckingIn, nearbyCounter, points, checked } = this.state;
         return (
             <ContainerDiv justifyContent="flex-start" alignItems="center">
              <Title>Leaderboard</Title>
@@ -35,7 +27,6 @@ class CheckIn extends React.Component {
                 <Score>890</Score>
               </RankWrapper>
              </PodiumWrapper>
-
              <TableWrapper>
               <RankingRow>
                 <p style={{ fontSize: '10px'}}>4th</p>
@@ -53,32 +44,14 @@ class CheckIn extends React.Component {
                 <Name>Vu Khong Long</Name>
               </RankingRow>
               <RankingRow>
-                <p style={{ fontSize: '10px' }}>7th</p>
+                <p style={{ fontSize: '10px' }}>69th</p>
                 <FemaleYellow width={22} height={22} style={{ marginLeft: '10px' }}/>
-                <Name>Long Long</Name>
+                <Name>YOUR NAME</Name>
               </RankingRow>
              </TableWrapper>
              
             </ContainerDiv>
         );
-    }
-
-    confirmCheckIn = () => {
-      this.setState({
-        checked: true
-      })
-    }
-
-    checkIn = () => {
-        this.setState({ isCheckingIn: true }, () => {
-            setTimeout(() => {
-                this.setState({
-                    isCheckingIn: false,
-                    nearbyCounter: 'Kattila',
-                    points: 30
-                })
-            }, 3000)
-        })
     }
 }
 
