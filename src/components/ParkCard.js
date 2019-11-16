@@ -42,6 +42,7 @@ const VisitorStatusText = styled.p`
 `
 
 const StyledCard = styled(Card)`
+  cursor: pointer;
   border: none;
   background-color: #EDEDED;
   margin: 10px 0;
