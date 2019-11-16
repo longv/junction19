@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Switch>
         <MainLayoutRoute exact path="/" component={Home} />
-        <Route exact path="/checkin" component={CheckIn} />
+        <MainLayoutRoute exact path="/check-in" component={CheckIn} />
         <Route component={NotFound} />
       </Switch>
     </Router>

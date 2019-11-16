@@ -1,34 +1,72 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Flex } from 'reflexbox';
-// import posed from 'react-pose';
+import posed from 'react-pose';
 import {ReactComponent as Logo} from "../svg-assets/loading.svg";
 
 class CheckIn extends React.Component {
     state = {
-        isCheckingIn: false
+      isCheckingIn: false,
+      checked: false,
+      nearbyCounter: null,
+      points: null
     };
 
     render() {
-        const { isCheckingIn } = this.state;
+        const { isCheckingIn, nearbyCounter, points, checked } = this.state;
         return (
             <ContainerDiv justifyContent="center" alignItems="center">
                 {
-                    !isCheckingIn &&
-                    <AnimatedButton justifyContent="center" alignItems="center" onClick={this.checkIn}>
-                        Check in
-                    </AnimatedButton>
+                    !isCheckingIn && !nearbyCounter && !checked && (
+                      <AnimatedButton justifyContent="center" alignItems="center" onClick={this.checkIn}>
+                          Check in
+                      </AnimatedButton>
+                    )
+                }
+                {
+                    nearbyCounter && !checked && (
+                        <NearbyDiv>
+                          <p>{nearbyCounter} is found.</p>
+                          <p>Check in and score {points} points?</p>
+                          <Button onClick={this.confirmCheckIn}>Check in</Button>
+                        </NearbyDiv>
+                    )
+                }
+                {
+                  checked && (
+                    <NearbyDiv>
+                      <p>Kattila</p>
+                      <Subtext>Nuuksio National Park</Subtext>
+                      <p>Yayy, you're now checked in!</p>
+                      <Score>+30</Score>
+                      <p>Your new score: 1260</p>
+                    </NearbyDiv>
+                  )
                 }
                 {
                     isCheckingIn &&
-                    <Logo/>
+                    <Logo />
                 }
             </ContainerDiv>
         );
     }
 
+    confirmCheckIn = () => {
+      this.setState({
+        checked: true
+      })
+    }
+
     checkIn = () => {
-        this.setState({isCheckingIn: true})
+        this.setState({ isCheckingIn: true }, () => {
+            setTimeout(() => {
+                this.setState({
+                    isCheckingIn: false,
+                    nearbyCounter: 'Kattila',
+                    points: 30
+                })
+            }, 3000)
+        })
     }
 }
 
@@ -36,15 +74,43 @@ const ContainerDiv = styled(Flex)`
   height: 100vh;
 `;
 
+const NearbyDiv = styled(Flex)`
+  font-size: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
 const Circle = styled(Flex)`
-    padding: 10px;
-    margin: 20px;
-    display: inline-block;
-    background-color: #AFEDD9;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+  padding: 20px;
+  margin: 20px;
+  display: inline-block;
+  background-color: #AFEDD9;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 200px;
+  height: 200px;
 `;
+
+const Score = styled.div`
+  color: #AFEDD9;
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+`
+
+const Subtext = styled.div`
+  font-size: 14px;
+  color: grey;
+  margin-bottom: 30px;
+`
+
+const Button = styled.div`
+  padding: 20px;
+  font-size: 15px;
+  margin-top: 60px;
+  background-color: #AFEDD9;
+`
 const AnimatedButton = posed(Circle)({
     hoverable: true,
     pressable: true,
