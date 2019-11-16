@@ -1,7 +1,6 @@
 import { variables } from '../styles/variables'
 
 export const assignVisitorStatusColor = (type) => {
-  console.log(type)
   switch (type) {
     case "Very busy":
       return variables.colors.red;

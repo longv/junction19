@@ -4,6 +4,7 @@ import {Box, Flex} from 'reflexbox';
 import { Input } from 'antd';
 import _ from 'lodash';
 import { ParkCard } from '../components'
+import { variables } from  '../styles/variables'
 
 class Home extends React.Component {
 
@@ -12,12 +13,12 @@ class Home extends React.Component {
       {
         name: 'Nuuksio National Park',
         location: 'Espoo, Finland',
-        visitorStatus: 'Very busy'
+        visitorStatus: variables.levels.veryBusy
       },
       {
         name: 'Valkmusa',
         location: 'Kymenlaakso, Finland',
-        visitorStatus: 'Moderate'
+        visitorStatus: variables.levels.moderate
       }
     ]
 
@@ -25,7 +26,7 @@ class Home extends React.Component {
       {
         name: 'Pallas-Yllästunturi',
         location: 'Lapland, Finland',
-        visitorStatus: 'Low'
+        visitorStatus: variables.levels.low
       }
     ]
 
