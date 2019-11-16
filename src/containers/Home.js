@@ -37,11 +37,11 @@ class Home extends React.Component {
         />
 
         <p>Nearby</p>
-        <Flex flexWrap="wrap">
+        <Flex flexWrap="wrap" mb={4}>
           {_.map(nearbyParkData, (park, i) => {
             return (
-              <Box width={[1, 1/3]} mr={[0,2]}>
-                <ParkCard park={park} key={i}/>
+              <Box width={[1, 1/3]} mr={[0,2]} key={i}>
+                <ParkCard park={park} />
               </Box>
             )
           })}
@@ -51,8 +51,8 @@ class Home extends React.Component {
         <Flex flexWrap="wrap">
           {_.map(recommendParkData, (park, i) => {
             return (
-              <Box width={[1, 1/3]} mr={[0,2]}>
-                <ParkCard park={park} key={i}/>
+              <Box width={[1, 1/3]} mr={[0,2]} key={i}>
+                <ParkCard park={park} />
               </Box>
             )
           })}
