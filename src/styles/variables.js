@@ -7,6 +7,11 @@ const variables = {
     blue: '#326199',
     green: '#4fb1a1',
     darkGray: '#121212'
+  },
+  media: {
+    sm: 'screen and (min-width: 0px)',
+    md: 'screen and (min-width: 48em)',
+    lg: 'screen and (min-width: 64em)',
   }
 }
 
