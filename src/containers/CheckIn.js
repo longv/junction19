@@ -71,7 +71,7 @@ class CheckIn extends React.Component {
 }
 
 const ContainerDiv = styled(Flex)`
-  height: 100vh;
+  height: 90vh;
 `;
 
 const NearbyDiv = styled(Flex)`

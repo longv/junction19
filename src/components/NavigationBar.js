@@ -24,9 +24,9 @@ const navItems = [
     icon: <StyledIcon type="environment" />
   },
   {
-    key: 'profile',
-    text: 'Profile',
-    url: '/profile',
+    key: 'leaderboard',
+    text: 'Leaderboard',
+    url: '/leaderboard',
     icon: <StyledIcon type="user" />
   }
 ]
