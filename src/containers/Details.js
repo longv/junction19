@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Flex, Box } from 'reflexbox';
 import { Icon, Collapse } from 'antd';
-import { VisitorStatus } from '../components'
+import { VisitorStatus, Chart } from '../components'
+import { variables } from '../styles/variables'
+
 
 
 class Details extends Component {
@@ -19,19 +21,155 @@ class Details extends Component {
       tracks: [
         {
           name: 'Haukkalampi',
-          visitorStatus: 'Very busy'
+          visitorStatus: variables.levels.veryBusy,
+          forecast: [
+            { 
+              day: 'Today',
+              level: variables.levels.veryBusy
+            },
+            { 
+              day: 'Mon',
+              level: variables.levels.low
+            },
+            { 
+              day: 'Tue',
+              level: variables.levels.veryLow
+            },
+            { 
+              day: 'Wed',
+              level: variables.levels.moderate
+            },
+            { 
+              day: 'Thu',
+              level: variables.levels.veryLow
+            },
+            { 
+              day: 'Fri',
+              level: variables.levels.busy
+            },
+            { 
+              day: 'Sat',
+              level: variables.levels.veryBusy
+            },
+            { 
+              day: 'Sun',
+              level: variables.levels.busy
+            }
+          ]
         },
         {
           name: 'Högbacka',
-          visitorStatus: 'Low'
+          visitorStatus: variables.levels.low,
+          forecast: [
+            { 
+              day: 'Today',
+              level: variables.levels.veryBusy
+            },
+            { 
+              day: 'Mon',
+              level: variables.levels.low
+            },
+            { 
+              day: 'Tue',
+              level: variables.levels.veryLow
+            },
+            { 
+              day: 'Wed',
+              level: variables.levels.moderate
+            },
+            { 
+              day: 'Thu',
+              level: variables.levels.veryLow
+            },
+            { 
+              day: 'Fri',
+              level: variables.levels.busy
+            },
+            { 
+              day: 'Sat',
+              level: variables.levels.veryBusy
+            },
+            { 
+              day: 'Sun',
+              level: variables.levels.busy
+            }
+          ]
         },
         {
           name: 'Kattila',
-          visitorStatus: 'Busy'
+          visitorStatus: variables.levels.busy,
+          forecast: [
+            { 
+              day: 'Today',
+              level: variables.levels.veryBusy
+            },
+            { 
+              day: 'Mon',
+              level: variables.levels.low
+            },
+            { 
+              day: 'Tue',
+              level: variables.levels.veryLow
+            },
+            { 
+              day: 'Wed',
+              level: variables.levels.moderate
+            },
+            { 
+              day: 'Thu',
+              level: variables.levels.veryLow
+            },
+            { 
+              day: 'Fri',
+              level: variables.levels.busy
+            },
+            { 
+              day: 'Sat',
+              level: variables.levels.veryBusy
+            },
+            { 
+              day: 'Sun',
+              level: variables.levels.busy
+            }
+          ]
         },
         {
           name: 'Siikaniemi',
-          visitorStatus: 'Moderate'
+          visitorStatus: variables.levels.moderate,
+          forecast: [
+            { 
+              day: 'Today',
+              level: variables.levels.veryBusy
+            },
+            { 
+              day: 'Mon',
+              level: variables.levels.low
+            },
+            { 
+              day: 'Tue',
+              level: variables.levels.veryLow
+            },
+            { 
+              day: 'Wed',
+              level: variables.levels.moderate
+            },
+            { 
+              day: 'Thu',
+              level: variables.levels.veryLow
+            },
+            { 
+              day: 'Fri',
+              level: variables.levels.busy
+            },
+            { 
+              day: 'Sat',
+              level: variables.levels.veryBusy
+            },
+            { 
+              day: 'Sun',
+              level: variables.levels.busy
+            }
+          ]
         },
       ]
     }
@@ -72,10 +210,10 @@ class Details extends Component {
           <LabelText>Wind</LabelText>
         </Box>
         <Box width={1} style={{textAlign: 'left'}}>
-          <Collapse defaultActiveKey={['1']} bordered={false} onChange={() => console.log('ok')} accordion>
+          <Collapse defaultActiveKey={['1']} bordered={false} accordion>
             {tracks.map((track, i) => (
               <Panel header={track.name} style={customPanelStyle} key={i+1} extra={this.getStatus(track.visitorStatus)}>
-                <p style={{fontWeight: '300'}}>{text}</p>
+                <Chart data={track.forecast} />
               </Panel>
             ))}
           </Collapse>
@@ -121,6 +259,5 @@ const DataText = styled.p`
 const LabelText = styled.p`
 
 `
-
 
 export default Details;

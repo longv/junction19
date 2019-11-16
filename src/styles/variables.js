@@ -12,6 +12,13 @@ const variables = {
     sm: 'screen and (min-width: 0px)',
     md: 'screen and (min-width: 48em)',
     lg: 'screen and (min-width: 64em)',
+  },
+  levels: {
+    veryBusy: 'Very busy',
+    busy: 'Busy',
+    moderate: 'Moderate',
+    low: 'Low',
+    veryLow: 'Very low' 
   }
 }
 
