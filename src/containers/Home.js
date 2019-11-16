@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Flex } from 'reflexbox';
+import {Box, Flex} from 'reflexbox';
 import { Input } from 'antd';
 import _ from 'lodash';
 import { ParkCard } from '../components'
@@ -37,20 +37,26 @@ class Home extends React.Component {
         />
 
         <p>Nearby</p>
-
-        {_.map(nearbyParkData, (park, i) => {
-          return (
-            <ParkCard park={park} key={i}/>
-          )
-        })}
+        <Flex flexWrap="wrap">
+          {_.map(nearbyParkData, (park, i) => {
+            return (
+              <Box width={[1, 1/3]} mr={[0,2]}>
+                <ParkCard park={park} key={i}/>
+              </Box>
+            )
+          })}
+        </Flex>
 
         <p>Recommendation</p>
-
-        {_.map(recommendParkData, (park, i) => {
-          return (
-            <ParkCard park={park} key={i}/>
-          )
-        })}
+        <Flex flexWrap="wrap">
+          {_.map(recommendParkData, (park, i) => {
+            return (
+              <Box width={[1, 1/3]} mr={[0,2]}>
+                <ParkCard park={park} key={i}/>
+              </Box>
+            )
+          })}
+        </Flex>
 
       </ContainerDiv>
     )
