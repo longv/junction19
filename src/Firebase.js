@@ -1,14 +1,14 @@
+import 'dotenv/config';
 import * as firebase from "firebase";
-import firestore from "firebase/firestore";
 
 const config = {
-  apiKey: process.env.firebaseApiKey,
-  authDomain: process.env.firebaseAuthDomain,
-  databaseURL: process.env.firebaseDatabaseURL,
-  projectId: process.env.firebaseProjectId,
-  storageBucket: process.env.firebaseStorageBucket,
-  messagingSenderId: process.env.firebaseMessagingSenderId
-}
+  apiKey: "AIzaSyDl6y9iUiPyDonfRKvoOLIaGyIme3Yvtlw",
+  authDomain: "junction19-e8110.firebaseapp.com",
+  databaseURL: "https://junction19-e8110.firebaseio.com",
+  projectId: "junction19-e8110",
+  storageBucket: "junction19-e8110.appspot.com",
+  messagingSenderId: "918871343305"
+};
 
 firebase.initializeApp(config);
 
