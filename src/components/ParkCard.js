@@ -32,6 +32,7 @@ const ParkLocationText = styled.p`
 
 const ParkNameText = styled.p`
   font-weight: 600;
+  margin-bottom: 4px;
 `
 
 const VisitorStatusText = styled.p`
