@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/junction19/static/css/main.34de6062.chunk.css",
+    "main.js": "/junction19/static/js/main.cec5cff6.chunk.js",
+    "main.js.map": "/junction19/static/js/main.cec5cff6.chunk.js.map",
+    "runtime-main.js": "/junction19/static/js/runtime-main.4d08fcf1.js",
+    "runtime-main.js.map": "/junction19/static/js/runtime-main.4d08fcf1.js.map",
+    "static/css/2.c62c3670.chunk.css": "/junction19/static/css/2.c62c3670.chunk.css",
+    "static/js/2.42464a91.chunk.js": "/junction19/static/js/2.42464a91.chunk.js",
+    "static/js/2.42464a91.chunk.js.map": "/junction19/static/js/2.42464a91.chunk.js.map",
+    "index.html": "/junction19/index.html",
+    "precache-manifest.9f9b339fe55c3d4375e2d11afc71a940.js": "/junction19/precache-manifest.9f9b339fe55c3d4375e2d11afc71a940.js",
+    "service-worker.js": "/junction19/service-worker.js",
+    "static/css/2.c62c3670.chunk.css.map": "/junction19/static/css/2.c62c3670.chunk.css.map",
+    "static/css/main.34de6062.chunk.css.map": "/junction19/static/css/main.34de6062.chunk.css.map",
+    "static/media/female-red.51572836.svg": "/junction19/static/media/female-red.51572836.svg",
+    "static/media/loading.350da76c.svg": "/junction19/static/media/loading.350da76c.svg",
+    "static/media/male-blue.39f104d0.svg": "/junction19/static/media/male-blue.39f104d0.svg",
+    "static/media/male-yellow.317495fc.svg": "/junction19/static/media/male-yellow.317495fc.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4d08fcf1.js",
+    "static/css/2.c62c3670.chunk.css",
+    "static/js/2.42464a91.chunk.js",
+    "static/css/main.34de6062.chunk.css",
+    "static/js/main.cec5cff6.chunk.js"
+  ]
+}
