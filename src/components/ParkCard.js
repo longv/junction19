@@ -1,8 +1,8 @@
 import React from 'react'
 import {Flex} from "reflexbox";
-import {assignVisitorStatusColor} from "../utils/colorUtils";
 import styled from "styled-components";
 import {Card} from "antd";
+import { VisitorStatus } from './index'
 
 const ParkCard = (props) => {
   const { park } = props
@@ -14,11 +14,7 @@ const ParkCard = (props) => {
           <ParkLocationText>{park.location}</ParkLocationText>
         </Flex>
         <Flex flexDirection="column" justifyContent="flex-end">
-          <VisitorStatusText
-            color={assignVisitorStatusColor(park.visitorStatus)}
-          >
-            {park.visitorStatus}
-          </VisitorStatusText>
+          <VisitorStatus text={park.visitorStatus} />
         </Flex>
       </Flex>
     </StyledCard>
@@ -33,13 +29,6 @@ const ParkLocationText = styled.p`
 const ParkNameText = styled.p`
   font-weight: 600;
   margin-bottom: 4px;
-`
-
-const VisitorStatusText = styled.p`
-  margin: 0;
-  font-size: 12px;
-  font-weight: 600;
-  color: ${props => props.color};
 `
 
 const StyledCard = styled(Card)`
