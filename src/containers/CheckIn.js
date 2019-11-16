@@ -3,28 +3,30 @@ import styled from 'styled-components';
 import { Flex } from 'reflexbox';
 import posed from 'react-pose';
 import {ReactComponent as Logo} from "../svg-assets/loading.svg";
+import {Link} from "react-router-dom";
 
 class CheckIn extends React.Component {
     state = {
       isCheckingIn: false,
       checked: false,
       nearbyCounter: null,
-      points: null
+      points: null,
+        user: JSON.parse(localStorage.getItem("user"))
     };
 
     render() {
-        const { isCheckingIn, nearbyCounter, points, checked } = this.state;
+        const { isCheckingIn, nearbyCounter, points, checked, user } = this.state;
         return (
             <ContainerDiv justifyContent="center" alignItems="center">
                 {
-                    !isCheckingIn && !nearbyCounter && !checked && (
+                    user && !isCheckingIn && !nearbyCounter && !checked && (
                       <AnimatedButton justifyContent="center" alignItems="center" onClick={this.checkIn}>
                           Check in
                       </AnimatedButton>
                     )
                 }
                 {
-                    nearbyCounter && !checked && (
+                    user && nearbyCounter && !checked && (
                         <NearbyDiv>
                           <p>{nearbyCounter} is found.</p>
                           <p>Check in and score {points} points?</p>
@@ -33,7 +35,7 @@ class CheckIn extends React.Component {
                     )
                 }
                 {
-                  checked && (
+                  user && checked && (
                     <NearbyDiv>
                       <p>Kattila</p>
                       <Subtext>Nuuksio National Park</Subtext>
@@ -44,8 +46,22 @@ class CheckIn extends React.Component {
                   )
                 }
                 {
-                    isCheckingIn &&
+                    user && isCheckingIn &&
                     <Logo />
+                }
+                {
+                    !user &&
+                    <SignInDiv>
+                        <div>Let's sign in to get you to the board!</div>
+                        <Button>
+                            <Link to={{
+                                pathname: '/login',
+                                state: {
+                                    originUrl: '/check-in'
+                                }
+                            }}>Sign in</Link>
+                        </Button>
+                    </SignInDiv>
                 }
             </ContainerDiv>
         );
@@ -73,6 +89,11 @@ class CheckIn extends React.Component {
 const ContainerDiv = styled(Flex)`
   height: 90vh;
 `;
+
+const SignInDiv = styled(Flex)`
+  flex-direction: column;
+  padding-top: 50px;
+`
 
 const NearbyDiv = styled(Flex)`
   font-size: 20px;
