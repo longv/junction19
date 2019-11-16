@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Flex } from 'reflexbox';
-import posed from 'react-pose';
+// import posed from 'react-pose';
 import {ReactComponent as Logo} from "../svg-assets/loading.svg";
 
 class CheckIn extends React.Component {
