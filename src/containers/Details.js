@@ -209,7 +209,7 @@ class Details extends Component {
           <DataText>{weather.wind}</DataText>
           <LabelText>Wind</LabelText>
         </Box>
-        <Box width={1} style={{textAlign: 'left'}}>
+        <Box width={1} style={{textAlign: 'left', paddingBottom: '40px'}}>
           <Collapse defaultActiveKey={['1']} bordered={false} accordion>
             {tracks.map((track, i) => (
               <Panel header={track.name} style={customPanelStyle} key={i+1} extra={this.getStatus(track.visitorStatus)}>

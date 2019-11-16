@@ -27,6 +27,12 @@ const navItems = [
     key: 'leaderboard',
     text: 'Leaderboard',
     url: '/leaderboard',
+    icon: <StyledIcon type="trophy" />
+  },
+  {
+    key: 'profile',
+    text: 'Profile',
+    url: '/profile',
     icon: <StyledIcon type="user" />
   }
 ]

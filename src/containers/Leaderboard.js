@@ -14,17 +14,17 @@ class CheckIn extends React.Component {
               <RankWrapper marginTop={50}>
                 <MaleBlue width={90} height={90}/>
                 <Rank>2nd place</Rank>
-                <Score>980</Score>
+                <Score>1780</Score>
               </RankWrapper>
               <RankWrapper margin="0 10px">
                 <FemaleRed width={100} height={100} />
                 <Rank>1st place</Rank>
-                <Score>1030</Score>
+                <Score>1850</Score>
               </RankWrapper>
               <RankWrapper marginTop={60}>
                 <FemaleYellow width={80} height={80}/>
                 <Rank>3rd place</Rank>
-                <Score>890</Score>
+                <Score>1630</Score>
               </RankWrapper>
              </PodiumWrapper>
              <TableWrapper>

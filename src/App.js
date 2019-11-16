@@ -6,6 +6,7 @@ import Leaderboard from "./containers/Leaderboard";
 import NotFound from './containers/NotFound'
 import MainLayoutRoute from "./route/MainLayoutRoute";
 import Details from './containers/Details';
+import Profile from './containers/Profile';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <MainLayoutRoute exact path="/check-in" component={CheckIn} />
         <MainLayoutRoute exact path="/leaderboard" component={Leaderboard} />
         <MainLayoutRoute exact path="/details" component={Details} />
+        <MainLayoutRoute exact path="/profile" component={Profile} />
         <Route component={NotFound} />
       </Switch>
     </Router>
