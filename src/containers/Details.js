@@ -5,8 +5,6 @@ import { Icon, Collapse } from 'antd';
 import { VisitorStatus, Chart } from '../components'
 import { variables } from '../styles/variables'
 
-
-
 class Details extends Component {
   constructor(props) {
     super(props)
@@ -23,35 +21,35 @@ class Details extends Component {
           name: 'Haukkalampi',
           visitorStatus: variables.levels.veryBusy,
           forecast: [
-            { 
+            {
               day: 'Today',
               level: variables.levels.veryBusy
             },
-            { 
+            {
               day: 'Mon',
               level: variables.levels.low
             },
-            { 
+            {
               day: 'Tue',
               level: variables.levels.veryLow
             },
-            { 
+            {
               day: 'Wed',
               level: variables.levels.moderate
             },
-            { 
+            {
               day: 'Thu',
               level: variables.levels.veryLow
             },
-            { 
+            {
               day: 'Fri',
               level: variables.levels.busy
             },
-            { 
+            {
               day: 'Sat',
               level: variables.levels.veryBusy
             },
-            { 
+            {
               day: 'Sun',
               level: variables.levels.busy
             }
@@ -61,35 +59,35 @@ class Details extends Component {
           name: 'Högbacka',
           visitorStatus: variables.levels.low,
           forecast: [
-            { 
+            {
               day: 'Today',
               level: variables.levels.veryBusy
             },
-            { 
+            {
               day: 'Mon',
               level: variables.levels.low
             },
-            { 
+            {
               day: 'Tue',
               level: variables.levels.veryLow
             },
-            { 
+            {
               day: 'Wed',
               level: variables.levels.moderate
             },
-            { 
+            {
               day: 'Thu',
               level: variables.levels.veryLow
             },
-            { 
+            {
               day: 'Fri',
               level: variables.levels.busy
             },
-            { 
+            {
               day: 'Sat',
               level: variables.levels.veryBusy
             },
-            { 
+            {
               day: 'Sun',
               level: variables.levels.busy
             }
@@ -99,35 +97,35 @@ class Details extends Component {
           name: 'Kattila',
           visitorStatus: variables.levels.busy,
           forecast: [
-            { 
+            {
               day: 'Today',
               level: variables.levels.veryBusy
             },
-            { 
+            {
               day: 'Mon',
               level: variables.levels.low
             },
-            { 
+            {
               day: 'Tue',
               level: variables.levels.veryLow
             },
-            { 
+            {
               day: 'Wed',
               level: variables.levels.moderate
             },
-            { 
+            {
               day: 'Thu',
               level: variables.levels.veryLow
             },
-            { 
+            {
               day: 'Fri',
               level: variables.levels.busy
             },
-            { 
+            {
               day: 'Sat',
               level: variables.levels.veryBusy
             },
-            { 
+            {
               day: 'Sun',
               level: variables.levels.busy
             }
@@ -137,35 +135,35 @@ class Details extends Component {
           name: 'Siikaniemi',
           visitorStatus: variables.levels.moderate,
           forecast: [
-            { 
+            {
               day: 'Today',
               level: variables.levels.veryBusy
             },
-            { 
+            {
               day: 'Mon',
               level: variables.levels.low
             },
-            { 
+            {
               day: 'Tue',
               level: variables.levels.veryLow
             },
-            { 
+            {
               day: 'Wed',
               level: variables.levels.moderate
             },
-            { 
+            {
               day: 'Thu',
               level: variables.levels.veryLow
             },
-            { 
+            {
               day: 'Fri',
               level: variables.levels.busy
             },
-            { 
+            {
               day: 'Sat',
               level: variables.levels.veryBusy
             },
-            { 
+            {
               day: 'Sun',
               level: variables.levels.busy
             }
@@ -180,7 +178,6 @@ class Details extends Component {
   }
 
   render() {
-    const text = 'text'
     const { date, level, weather, tracks } = this.state
     const { Panel } = Collapse
     return (
@@ -219,7 +216,7 @@ class Details extends Component {
           </Collapse>
         </Box>
       </Container>
-      
+
     );
   }
 }
@@ -233,6 +230,8 @@ const Container = styled(Flex)`
   flex-wrap: wrap;
   color: #121212;
   text-align: center;
+  width: 100%;
+  max-width: 45em;
 `
 
 const DateText = styled.p`
