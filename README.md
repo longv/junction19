@@ -1,68 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Flying Squirrel
 
-## Available Scripts
+Our project provides insights about Finnish national parks and helps nature lovers plan their future visits. The main goal is to bring visitors a pleasant and enjoyable experience while surrounding by wonderful Finnish nature.
 
-In the project directory, you can run:
+A project submission to [Junction Hackathon 2019](https://2019.hackjunction.com/) and our [Track Challenge](https://2019.hackjunction.com/challenges/finding-ways-to-keep-finlands-national-parks-enjoyable-for-both-foreign-travels-and-locals)
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Demo
+[Demo](https://whoami1201.github.io/junction19)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+## Description
+- **Solution idea**: The application helps to distribute visitors more evenly among tracks by directing them to less used ones. It provides forecast information of peak and low hours by days so visitors can plan their trip ahead.
+-  **Impacts on real world**:  By distributing visitors evenly, we help to reduce the pressure on the environment, better visitors experience, boost local business and also help park organisers be well-prepared.
+- **Technologies**: React, Node, Firebase, GPS
+- **Future plans**: The application can be extended and have more features like: dashboard to provide personalised info, suggest locations based on visitors' interest
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How
 
-### `npm run build`
+We were given a dataset of visitor counts during the last few years in the national parks of Finland. Based on that, we make a prediction of the busy level of the current time and try to suggest alternatives to congested gates in the parks, thus help distribute the visitors evenly.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We also had a gamification idea that will let you check-in the nearest gate based on your GPS location and then give you points according to the busy levels. This will help the system to collect real-time usage level of the parks. Futhermore, there will be a leaderboard for park visitors as an incentive and you can get some gifts for being the *Highest Ranking Visitor in January* :) 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Limitations
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Due to time constraint and a large amount of raw data, we didn't manage to link our backend with the processed prediction data.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
