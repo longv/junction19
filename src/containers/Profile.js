@@ -69,6 +69,7 @@ class CheckIn extends React.Component {
 const ContainerDiv = styled(Flex)`
   flex-direction: column;
   padding-top: 50px;
+  width: 100%;
 `;
 
 const Title = styled.div`
@@ -90,7 +91,7 @@ const ScoreRankWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 30%;
   margin-top: 40px;
 `
 
