@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Flex } from 'reflexbox';
 import {ReactComponent as FemaleRed} from "../svg-assets/female-red.svg";
-import {Button} from "antd";
+import {Button as AntButton} from "antd";
+import {variables} from "../styles/variables";
 
 class CheckIn extends React.Component {
   state = {
@@ -34,22 +35,26 @@ class CheckIn extends React.Component {
               <Subtext>Rank</Subtext>
             </ScoreRank>
           </ScoreRankWrapper>
-          <Link style={{marginTop: '100px', color: '#d83236', fontSize: '18px', fontWeight: 'bold'}}>LOG OUT</Link>
+          <Link to="/login" style={{marginTop: '100px', color: '#d83236', fontSize: '18px', fontWeight: 'bold'}}>LOG OUT</Link>
         </ContainerDiv>
       );
     } else {
       return (
-        <ContainerDiv>
-          <div>Let's sign in to get you to the board!</div>
-          <Button>
-            <Link to={{
-              pathname: '/login',
-              state: {
-                originUrl: '/profile'
-              }
-            }}>Sign in</Link>
-          </Button>
-        </ContainerDiv>
+        <SignInDiv>
+          <h2>Let's sign in to see your profile!</h2>
+          <SignInButton>
+            <Link
+              to={{
+                pathname: '/login',
+                state: {
+                  originUrl: '/check-in'
+                }
+              }}
+            >
+              Sign in
+            </Link>
+          </SignInButton>
+        </SignInDiv>
       )
     }
   }
@@ -81,6 +86,28 @@ const ScoreRankWrapper = styled.div`
   align-items: center;
   width: 50%;
   margin-top: 40px;
+`
+
+const SignInDiv = styled.div`
+  padding: 50px 0;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+`
+
+const SignInButton = styled(AntButton)`
+  width: 300px;
+  margin: 30px auto;
+  background-color: ${variables.colors.primary};
+  border: none;
+  color: white;
+  font-weight: bold;
+  
+  :hover {
+    background-color: ${variables.colors.primary};
+    color: white;
+  }
 `
 
 const ScoreRank = styled.div`

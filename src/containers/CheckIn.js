@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Flex } from 'reflexbox';
 import posed from 'react-pose';
+import {Button as AntButton } from 'antd'
 import {ReactComponent as Logo} from "../svg-assets/loading.svg";
 import {Link} from "react-router-dom";
+import {variables} from "../styles/variables";
 
 class CheckIn extends React.Component {
     state = {
@@ -49,18 +51,22 @@ class CheckIn extends React.Component {
                     user && isCheckingIn &&
                     <Logo />
                 }
-                {
-                    !user &&
+
+                {!user &&
                     <SignInDiv>
-                        <div>Let's sign in to get you to the board!</div>
-                        <Button>
-                            <Link to={{
-                                pathname: '/login',
-                                state: {
-                                    originUrl: '/check-in'
-                                }
-                            }}>Sign in</Link>
-                        </Button>
+                        <h2>Let's sign in to get you check in!</h2>
+                        <SignInButton>
+                            <Link
+                              to={{
+                                  pathname: '/login',
+                                  state: {
+                                      originUrl: '/check-in'
+                                  }
+                              }}
+                            >
+                                Sign in
+                            </Link>
+                        </SignInButton>
                     </SignInDiv>
                 }
             </ContainerDiv>
@@ -90,9 +96,26 @@ const ContainerDiv = styled(Flex)`
   height: 90vh;
 `;
 
-const SignInDiv = styled(Flex)`
+const SignInDiv = styled.div`
+  padding: 50px 0;
+  display: flex;
+  text-align: center;
   flex-direction: column;
-  padding-top: 50px;
+  justify-content: center;
+`
+
+const SignInButton = styled(AntButton)`
+  width: 300px;
+  margin: 30px auto;
+  background-color: ${variables.colors.primary};
+  border: none;
+  color: white;
+  font-weight: bold;
+  
+  :hover {
+    background-color: ${variables.colors.primary};
+    color: white;
+  }
 `
 
 const NearbyDiv = styled(Flex)`
