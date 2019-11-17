@@ -11,7 +11,7 @@ class CheckIn extends React.Component {
       checked: false,
       nearbyCounter: null,
       points: null,
-        user: JSON.parse(localStorage.getItem("user"))
+      user: JSON.parse(localStorage.getItem("user"))
     };
 
     render() {
