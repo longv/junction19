@@ -35,7 +35,13 @@ class CheckIn extends React.Component {
               <Subtext>Rank</Subtext>
             </ScoreRank>
           </ScoreRankWrapper>
-          <Link to="/login" style={{marginTop: '100px', color: '#d83236', fontSize: '18px', fontWeight: 'bold'}}>LOG OUT</Link>
+          <Link
+            to={"/"}
+            style={{marginTop: '100px', color: '#d83236', fontSize: '18px', fontWeight: 'bold'}}
+            onClick={() => localStorage.removeItem("user")}
+          >
+            LOG OUT
+          </Link>
         </ContainerDiv>
       );
     } else {
@@ -47,7 +53,7 @@ class CheckIn extends React.Component {
               to={{
                 pathname: '/login',
                 state: {
-                  originUrl: '/check-in'
+                  originUrl: '/profile'
                 }
               }}
             >
