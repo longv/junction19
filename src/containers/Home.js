@@ -11,6 +11,21 @@ import {
 
 class Home extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      nearbyParkData: null
+    }
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:8000/parks')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+      })
+  }
+
   render() {
     const nearbyParkData = [
       {
