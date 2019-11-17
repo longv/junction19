@@ -8,6 +8,8 @@ A project submission to [Junction Hackathon 2019](https://2019.hackjunction.com/
 ## Demo
 [Demo](https://whoami1201.github.io/junction19)
 
+Backend code to process data is found [here](https://github.com/longv/junction19-server)
+
 
 ## Description
 - **Solution idea**: The application helps to distribute visitors more evenly among tracks by directing them to less used ones. It provides forecast information of peak and low hours by days so visitors can plan their trip ahead.
