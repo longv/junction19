@@ -33,7 +33,7 @@ class CheckIn extends React.Component {
               <RankingRow>
                 <p style={{ fontSize: '10px'}}>4th</p>
                 <MaleBlue width={22} height={22} style={{ marginLeft: '10px' }}/>
-                <Name>Long Vu</Name>
+                <Name>Long Nhong</Name>
               </RankingRow>
               <RankingRow>
                 <p style={{ fontSize: '10px' }}>5th</p>
@@ -56,7 +56,6 @@ class CheckIn extends React.Component {
                 <Name>Bao Nguyen</Name>
               </RankingRow>
              </TableWrapper>
-             
             </ContainerDiv>
         );
     }
