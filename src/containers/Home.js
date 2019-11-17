@@ -71,6 +71,7 @@ class Home extends React.Component {
 
 const ContainerDiv = styled(Flex)`
   padding: 32px;
+  width: 100%;
 `
 
 const SearchBox = styled(Input.Search)`
