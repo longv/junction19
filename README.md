@@ -8,6 +8,10 @@ A project submission to [Junction Hackathon 2019](https://2019.hackjunction.com/
 ## Demo
 [Demo](https://whoami1201.github.io/junction19)
 
+Scan this on your mobile:
+
+![QR Code](qr-code.png)
+
 Backend code to process data is found [here](https://github.com/longv/junction19-server)
 
 

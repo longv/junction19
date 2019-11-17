@@ -91,7 +91,7 @@ const ScoreRankWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 50%;
   margin-top: 40px;
 `
 
