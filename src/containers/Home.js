@@ -22,7 +22,9 @@ class Home extends React.Component {
     fetch('http://localhost:8000/parks')
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        this.setState({
+          nearbyParkData: data
+        })
       })
   }
 
