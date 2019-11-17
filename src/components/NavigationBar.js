@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { variables } from '../styles/variables'
 import MediaQuery from 'react-responsive'
 import { Menu, Icon } from 'antd'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 
 const StyledIcon = styled(Icon)`
   margin-right: 5px;
@@ -55,10 +55,10 @@ export class NavigationBar extends React.Component {
 
   renderDesktopNavbar = () => {
     return (
-      <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode="horizontal">
+      <Menu onClick={this.handleClick} selectedKeys={[this.props.location.pathname]} mode="horizontal">
         {_.map(navItems, (item) => {
           return (
-            <Menu.Item key={item.key}>
+            <Menu.Item key={item.url}>
               <Link to={item.url}>
                 {item.icon}
                 {item.text}
@@ -73,10 +73,10 @@ export class NavigationBar extends React.Component {
   renderMobileNavbar = () => {
     return (
       <MobileContainerDiv>
-        <StyledMenu defaultSelectedKeys={['home']} mode="horizontal">
+        <StyledMenu selectedKeys={[this.props.location.pathname]} mode="horizontal">
           {_.map(navItems, item => {
             return (
-              <StyledMenuItem key={item.key}>
+              <StyledMenuItem key={item.url}>
                 {item.icon}
                 <Link to={item.url} />
               </StyledMenuItem>
@@ -125,4 +125,4 @@ const StyledMenuItem = styled(Menu.Item)`
   text-align: center;
 `
 
-export default NavigationBar
+export default withRouter(NavigationBar)
