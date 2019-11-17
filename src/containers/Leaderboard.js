@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { Flex } from 'reflexbox';
 import {ReactComponent as MaleBlue} from "../svg-assets/male-blue.svg";
+import {ReactComponent as MaleYellow} from "../svg-assets/male-yellow.svg";
 import {ReactComponent as FemaleRed} from "../svg-assets/female-red.svg";
-import {ReactComponent as FemaleYellow} from "../svg-assets/male-yellow.svg";
+import {ReactComponent as FemaleYellow} from "../svg-assets/female-yellow.svg";
+import {ReactComponent as FemaleBlue} from "../svg-assets/female-blue.svg";
 
 class CheckIn extends React.Component {
     render() {
@@ -35,18 +37,23 @@ class CheckIn extends React.Component {
               </RankingRow>
               <RankingRow>
                 <p style={{ fontSize: '10px' }}>5th</p>
-                <FemaleRed width={22} height={22} style={{ marginLeft: '10px' }}/>
-                <Name>Long Khong Vu</Name>
+                <FemaleBlue width={22} height={22} style={{ marginLeft: '10px' }}/>
+                <Name>Phuc Ho</Name>
               </RankingRow>
               <RankingRow>
                 <p style={{ fontSize: '10px' }}>6th</p>
-                <MaleBlue width={22} height={22} style={{ marginLeft: '10px' }}/>
-                <Name>Vu Khong Long</Name>
+                <FemaleYellow width={22} height={22} style={{ marginLeft: '10px' }}/>
+                <Name>Linh Pham</Name>
               </RankingRow>
               <RankingRow>
-                <p style={{ fontSize: '10px' }}>69th</p>
-                <FemaleYellow width={22} height={22} style={{ marginLeft: '10px' }}/>
-                <Name>Nong Nong</Name>
+                <p style={{ fontSize: '10px' }}>7th</p>
+                <FemaleRed width={22} height={22} style={{ marginLeft: '10px' }}/>
+                <Name>Hoang Nguyen</Name>
+              </RankingRow>
+              <RankingRow>
+                <p style={{ fontSize: '10px' }}>8th</p>
+                <MaleYellow width={22} height={22} style={{ marginLeft: '10px' }}/>
+                <Name>Bao Nguyen</Name>
               </RankingRow>
              </TableWrapper>
             </ContainerDiv>
@@ -88,7 +95,7 @@ const TableWrapper = styled.div`
   display: flex;
   margin-top: 30px;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
 `
 
 const RankingRow = styled.div`
