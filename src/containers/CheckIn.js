@@ -93,7 +93,7 @@ class CheckIn extends React.Component {
 }
 
 const ContainerDiv = styled(Flex)`
-  height: 90vh;
+  height: 100vh;
 `;
 
 const SignInDiv = styled.div`

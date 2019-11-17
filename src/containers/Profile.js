@@ -16,7 +16,7 @@ class CheckIn extends React.Component {
 
     if (user) {
       return (
-        <ContainerDiv justifyContent="flex-start" alignItems="center">
+        <ContainerDiv justifyContent="center" alignItems="center">
           <Title>Profile</Title>
           <PodiumWrapper>
             <RankWrapper margin="0 10px">
@@ -94,6 +94,7 @@ const SignInDiv = styled.div`
   text-align: center;
   flex-direction: column;
   justify-content: center;
+  height: 100vh;
 `
 
 const SignInButton = styled(AntButton)`
